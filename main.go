@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-
+						//PAQUETES QUE SE UTILIZARON//
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
@@ -24,10 +24,11 @@ func main() {
 
 	
 	db, err = gorm.Open("mysql", "root:martino@/bienes_raices?charset=utf8&parseTime=True&loc=Local")
+				//"mysql", "user:password@/dbname?charset=utf8&parseTime=True&loc=Local")//
 	
 
 	if err != nil {
-		fmt.Println(err)
+	tcp	fmt.Println(err)
 	}
 	defer db.Close()
 
